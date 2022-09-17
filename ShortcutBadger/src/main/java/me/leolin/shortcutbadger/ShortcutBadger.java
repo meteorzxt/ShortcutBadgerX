@@ -238,6 +238,11 @@ public final class ShortcutBadger {
                 sShortcutBadger = new VivoHomeBadger();
             else if (Build.MANUFACTURER.equalsIgnoreCase("ZTE"))
                 sShortcutBadger = new ZTEHomeBadger();
+            else if (Build.MANUFACTURER.equalsIgnoreCase("SAMSUNG"))
+                sShortcutBadger = new SamsungHomeBadger();
+            else if (Build.MANUFACTURER.equalsIgnoreCase("HUAWEI")
+                    || Build.MANUFACTURER.equalsIgnoreCase("HONOR"))
+                sShortcutBadger = new HuaweiHomeBadger();
             else
                 sShortcutBadger = new DefaultBadger();
         }
@@ -258,8 +263,9 @@ public final class ShortcutBadger {
 
     /**
      * Making sure the default Home activity is on top of the returned list
-     * @param defaultActivity       default Home activity
-     * @param resolveInfos          list of all Home activities in the system
+     *
+     * @param defaultActivity default Home activity
+     * @param resolveInfos    list of all Home activities in the system
      */
     private static void validateInfoList(ResolveInfo defaultActivity, List<ResolveInfo> resolveInfos) {
         int indexToSwapWith = 0;
