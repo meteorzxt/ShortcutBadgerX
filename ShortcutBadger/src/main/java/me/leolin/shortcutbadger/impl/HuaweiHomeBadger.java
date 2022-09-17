@@ -31,7 +31,6 @@ public class HuaweiHomeBadger implements Badger {
             context.getContentResolver().call(Uri.parse(HUAWEI_URI), "change_badge", null, localBundle);
             huaweiSuccess = true;
         } catch (Exception ignored) {
-
         }
 
         boolean honorSuccess = false;
@@ -39,7 +38,6 @@ public class HuaweiHomeBadger implements Badger {
             context.getContentResolver().call(Uri.parse(HONOR_URI), "change_badge", null, localBundle);
             honorSuccess = true;
         } catch (Exception ignored) {
-
         }
 
         if (!huaweiSuccess && !honorSuccess)
