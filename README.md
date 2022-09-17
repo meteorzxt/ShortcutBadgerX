@@ -6,13 +6,13 @@ Forked from [leolin310148/ShortcutBadger](https://github.com/leolin310148/Shortc
 Usage
 ===================================
 
-1. Add mavenCentral to your build script.
+1. Add jitpack to your build script.
     ```gradle
         repositories {
             maven { url 'https://jitpack.io' }
         }
     ```
-2. Add dependencies for ShortcutBadger, it's available from maven now.
+2. Add dependencies for ShortcutBadgerX.
     ```gradle     
         dependencies {
             implementation 'com.github.rlgo:ShortcutBadgerX:1.2.0'
