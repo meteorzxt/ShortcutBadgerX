@@ -28,7 +28,7 @@ public class BadgeIntentService extends IntentService {
         super.onCreate();
         mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
     }
-    
+
     @Override
     public void onStart(Intent intent, int startId) {
         super.onStart(intent, startId);
@@ -43,9 +43,10 @@ public class BadgeIntentService extends IntentService {
             notificationId++;
 
             Notification.Builder builder = new Notification.Builder(getApplicationContext())
-                .setContentTitle("")
-                .setContentText("")
-                .setSmallIcon(R.drawable.ic_launcher);
+                    .setContentTitle("ShortcutBadgerX")
+                    .setContentText("testing")
+                    .setNumber(badgeCount)
+                    .setSmallIcon(R.drawable.ic_launcher);
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 setupNotificationChannel();
