@@ -29,5 +29,5 @@ Usage
         Notification notification = builder.build();
         ShortcutBadger.applyNotification(getApplicationContext(), notification, badgeCount);
         notificationManager.notify(notificationId, notification);
-        ShortcutBadger.applyCount(MainActivity.this, badgeCount);
+        ShortcutBadger.applyCount(getApplicationContext(), badgeCount);
     ```
