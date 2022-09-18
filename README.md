@@ -1,6 +1,6 @@
 ShortcutBadgerX: [![](https://jitpack.io/v/rlgo/ShortcutBadgerX.svg)](https://jitpack.io/#rlgo/ShortcutBadgerX)
 ===================================
-Helper library to update android app icon badge count for different phone brand.\
+Helper library to set android app icon badge count for different phone brand.\
 Forked from [leolin310148/ShortcutBadger](https://github.com/leolin310148/ShortcutBadger) which seems no longer maintained.
 
 Usage
