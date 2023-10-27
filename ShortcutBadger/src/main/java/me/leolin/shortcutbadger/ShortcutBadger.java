@@ -205,10 +205,11 @@ public final class ShortcutBadger {
         Intent intent = new Intent(Intent.ACTION_MAIN);
         intent.addCategory(Intent.CATEGORY_HOME);
         List<ResolveInfo> resolveInfos = context.getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
-
-        //Turns out framework does not guarantee to put DEFAULT Activity on top of the list.
-        ResolveInfo resolveInfoDefault = context.getPackageManager().resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY);
-        validateInfoList(resolveInfoDefault, resolveInfos);
+        if(resolveInfos.size()>0){
+            //Turns out framework does not guarantee to put DEFAULT Activity on top of the list.
+            ResolveInfo resolveInfoDefault = context.getPackageManager().resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY);
+            validateInfoList(resolveInfoDefault, resolveInfos);
+        }
 
         for (ResolveInfo resolveInfo : resolveInfos) {
             String currentHomePackage = resolveInfo.activityInfo.packageName;
